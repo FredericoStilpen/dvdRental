@@ -30,15 +30,23 @@ public class Language {
     private Calendar last_update;
 
     public Integer getLanguage_id() {
-        return language_id;
+        return this.language_id;
     }
 
     public void setLanguage_id(Integer language_id) {
         this.language_id = language_id;
     }
 
+    public List<Film> getFilm() {
+        return this.film;
+    }
+
+    public void setFilm(List<Film> film) {
+        this.film = film;
+    }
+
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -46,11 +54,10 @@ public class Language {
     }
 
     public Calendar getLast_update() {
-        return last_update;
+        return this.last_update;
     }
 
     public void setLast_update(Calendar last_update) {
         this.last_update = last_update;
     }
-
 }

@@ -36,6 +36,7 @@ public class Rental {
 	@JoinColumn (name = "customer_id", referencedColumnName = "customer_id")
 	private Customer customer;
     
+    
     @Column (name = "return_date")
     private Calendar return_date;
     
@@ -45,5 +46,70 @@ public class Rental {
 
     @Column (name = "last_update")
     private Calendar last_update;
+
+
+    public Integer getRental_id() {
+        return this.rental_id;
+    }
+
+    public void setRental_id(Integer rental_id) {
+        this.rental_id = rental_id;
+    }
+
+    public Calendar getRental_date() {
+        return this.rental_date;
+    }
+
+    public void setRental_date(Calendar rental_date) {
+        this.rental_date = rental_date;
+    }
+
+    public List<Payment> getPayment() {
+        return this.payment;
+    }
+
+    public void setPayment(List<Payment> payment) {
+        this.payment = payment;
+    }
+
+    public Inventory getInventory() {
+        return this.inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
+    public Customer getCustomer() {
+        return this.customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Calendar getReturn_date() {
+        return this.return_date;
+    }
+
+    public void setReturn_date(Calendar return_date) {
+        this.return_date = return_date;
+    }
+
+    public Staff getStaff() {
+        return this.staff;
+    }
+
+    public void setStaff(Staff staff) {
+        this.staff = staff;
+    }
+
+    public Calendar getLast_update() {
+        return this.last_update;
+    }
+
+    public void setLast_update(Calendar last_update) {
+        this.last_update = last_update;
+    }
 
 }

@@ -31,12 +31,61 @@ public class Payment {
     
     @OneToOne // Aceita que dói menos.
 	@JoinColumn (name = "rental_id", referencedColumnName = "rental_id")
-	private Staff rental;
+	private Rental rental;
     
     @Column (name = "amount")
     private Double amount;
     
     @Column (name = "payment_date")
     private Calendar payment_date;
+
+
+    public Integer getPayment_id() {
+        return this.payment_id;
+    }
+
+    public void setPayment_id(Integer payment_id) {
+        this.payment_id = payment_id;
+    }
+
+    public Customer getCustomer() {
+        return this.customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Staff getStaff() {
+        return this.staff;
+    }
+
+    public void setStaff(Staff staff) {
+        this.staff = staff;
+    }
+
+    public Rental getRental() {
+        return this.rental;
+    }
+
+    public void setRental(Rental rental) {
+        this.rental = rental;
+    }
+
+    public Double getAmount() {
+        return this.amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public Calendar getPayment_date() {
+        return this.payment_date;
+    }
+
+    public void setPayment_date(Calendar payment_date) {
+        this.payment_date = payment_date;
+    }
 
 }

@@ -22,17 +22,58 @@ public class Inventory {
 	private Integer inventory_id;
 	
 	@OneToOne // Aceita que dói menos.
-	@JoinColumn (name = "film_id", referencedColumnName = "film_id")
+	@JoinColumn(name = "film_id", referencedColumnName = "film_id")
 	private Film film;
 	
-	@OneToOne (mappedBy = "inventory")
-	private Integer rental_id;
+	@OneToOne(mappedBy = "inventory")
+	private Rental rental;
 
 	@OneToOne
-	@JoinColumn (name = "store_id", referencedColumnName = "store_id")
+	@JoinColumn(name = "store_id", referencedColumnName = "store_id")
 	private Store store;
 	
 	@Column(name= "last_update")
 	private Calendar last_update;
+
+
+	public Integer getInventory_id() {
+		return this.inventory_id;
+	}
+
+	public void setInventory_id(Integer inventory_id) {
+		this.inventory_id = inventory_id;
+	}
+
+	public Film getFilm() {
+		return this.film;
+	}
+
+	public void setFilm(Film film) {
+		this.film = film;
+	}
+
+	public Rental getRental() {
+		return this.rental;
+	}
+
+	public void setRental(Rental rental) {
+		this.rental = rental;
+	}
+
+	public Store getStore() {
+		return this.store;
+	}
+
+	public void setStore(Store store) {
+		this.store = store;
+	}
+
+	public Calendar getLast_update() {
+		return this.last_update;
+	}
+
+	public void setLast_update(Calendar last_update) {
+		this.last_update = last_update;
+	}
 
 }

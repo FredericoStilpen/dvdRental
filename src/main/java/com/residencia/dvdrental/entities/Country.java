@@ -52,4 +52,13 @@ public class Country {
         this.last_update = last_update;
     }
 
+
+    public List<City> getCity() {
+        return this.city;
+    }
+
+    public void setCity(List<City> city) {
+        this.city = city;
+    }
+
 }

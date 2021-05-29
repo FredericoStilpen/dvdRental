@@ -8,6 +8,6 @@ public class DvdrentalApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DvdrentalApplication.class, args);
-	}
 
+	}
 }
